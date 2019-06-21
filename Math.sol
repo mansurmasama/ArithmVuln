@@ -1,10 +1,11 @@
-//testing the execution cost and transaction cost with the SafeMath library imported
+//with a SafeMath2 library
+
 pragma solidity ^0.5.0;
-import "browser/SafeMath.sol";
+import "browser/SafeMath2.sol";
 
 
 contract Maths {
-    using SafeMath for uint256;
+    using SafeMath2 for uint256;
     uint256 public total;
     
     function Math() public pure {
@@ -21,28 +22,28 @@ contract Maths {
     // addition operations
     function additions(uint256 x, uint y) public  {
 
-    total =x.add(y);
+    total =x.addsub(y);
 
 }
 
     //substraction operation
     function substraction(uint256 x, uint y) public  {
 
-    total =x.sub(y);
+    total =x.addsub(y);
 
 }
 
     //modulus operation
     function modulus(uint256 x, uint y) public  {
 
-    total =x.mod(y);
+    total =x.divmod(y);
 
 }
 
    //division operation
     function division(uint256 x, uint y) public  {
 
-    total =x.div(y);
+    total =x.divmod(y);
 
 }
     
